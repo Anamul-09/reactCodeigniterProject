@@ -1,0 +1,130 @@
+<-----site_url---------https://mfikri.com/en/blog/react-crud-codeigniter---------------->
+
+<------------------react app------------------->
+Step-4:
+1.Go to backend and create controller:php spark make:controller corscontroller
+2.Then, open the file and change the code to be like this:
+   use ResponseTrait;
+    public function index()
+    {
+        $model = new ProductModel();
+        $data['products'] = $model->findAll();
+        // return view('product/product_list', $data);
+        // print_r($data);
+        return $this->respond($data);
+    }
+
+	Step #6. CORS (Cross-Origin Resources Sharing)
+---------------------------------------------------------------
+1.creatr react app:npx create-react-app frontend
+2.run react project
+3.install react router dom:----npm install react-router-dom
+4.create Cros filter in codeigniter:----php spark make:filter Cors
+5.open the file and adding code to be like this: app/filter/Cors.php
+
+	 public function before(RequestInterface $request, $arguments = null)
+    {
+        header("Access-Control-Allow-Origin: *");
+        header("Access-Control-Allow-Headers: X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, 				Access-Control-Requested-Method, Authorization");
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PATCH, PUT, DELETE");
+        $method = $_SERVER['REQUEST_METHOD'];
+        if ($method == "OPTIONS") {
+            die();
+        }
+    }
+
+6.Go to app/config/filter.php and puttind this code
+'cors'     => App\Filters\Cors::class,   line no 30
+
+	line no 43 and putting == cors
+
+
+	<--------------Step #7. Front-End (React JS)----------->
+1.install axios:== npm i axios
+
+2.create prductlist file under conponants folder then putting this code:
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+
+const ProductList = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  const getProducts = async () => {
+    const products = await axios.get("http://localhost:8080/products");
+    setProducts(products.data.products);
+  };
+
+  const deleteProduct = async (id) => {
+    await axios.delete(`http://localhost:8080/products/${id}`);
+    getProducts();
+  };
+
+  return (
+    <div>
+      <Link to="/add" className="button is-primary mt-5">
+        Add New
+      </Link>
+      <table className="table is-striped is-fullwidth">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {products.map((product, index) => (
+            <tr key={product.id}>
+              <td>{index + 1}</td>
+              <td>{product.product_name}</td>
+              <td>{product.product_details}</td>
+              <td>
+                <Link
+                  to={`/edit/${product.id}`}
+                  className="button is-small is-info"
+                >
+                  Edit
+                </Link>
+                <button
+                  onClick={() => deleteProduct(product.id)}
+                  className="button is-small is-danger"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default ProductList;
+
+3.go to app.js and import this code:==import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+4.image show:==   <img style={{ width: "70px" }} src={`http://localhost:8080/${product.product_img}`}/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
