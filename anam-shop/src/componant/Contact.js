@@ -28,9 +28,9 @@ export default function Contact() {
   return (
     <div>
       {/* <!-- Start Content Page --> */}
-      <div class="container-fluid bg-light py-5">
-        <div class="col-md-6 m-auto text-center">
-          <h1 class="h1">Contact Us</h1>
+      <div className="container-fluid bg-light py-5">
+        <div className="col-md-6 m-auto text-center">
+          <h1 className="h1">Contact Us</h1>
           <p>
             Proident, sunt in culpa qui officia deserunt mollit anim id est
             laborum. Lorem ipsum dolor sit amet.
@@ -38,53 +38,53 @@ export default function Contact() {
         </div>
       </div>
 
-      <div class="container py-5">
-        <div class="row py-5">
-          <form class="col-md-9 m-auto" ref={form} onSubmit={sendEmail}>
-            <div class="row">
-              <div class="form-group col-md-9 mb-3">
-                <label for="inputname">Name</label>
+      <div className="container py-5">
+        <div className="row py-5">
+          <form className="col-md-9 m-auto" ref={form} onSubmit={sendEmail}>
+            <div className="row">
+              <div className="form-group col-md-9 mb-3">
+                <label htmlFor="inputname">Name</label>
                 <input
                   type="text"
-                  class="form-control mt-1"
+                  className="form-control mt-1"
                   id="name"
                   name="user_name"
                   placeholder="Enter your name"
                 />
               </div>
-              <div class="form-group col-md-9 mb-3">
-                <label for="inputemail">Email</label>
+              <div className="form-group col-md-9 mb-3">
+                <label htmlFor="inputemail">Email</label>
                 <input
                   type="email"
-                  class="form-control mt-1"
+                  className="form-control mt-1"
                   id="email"
                   name="user_email"
                   placeholder="Enter your email"
                 />
               </div>
             </div>
-            {/* <div class="mb-3">
+            {/* <div className="mb-3">
               <label for="inputsubject">Subject</label>
               <input
                 type="text"
-                class="form-control mt-1"
+                className="form-control mt-1"
                 id="subject"
                 name="subject"
                 placeholder="Subject"
               />
             </div> */}
-            <div class="mb-3">
-              <label for="inputmessage">Message</label>
+            <div className="mb-3">
+              <label htmlFor="inputmessage">Message</label>
               <textarea
-                class="form-control col-md-9 mt-1"
+                className="form-control col-md-9 mt-1"
                 id="message"
                 name="message"
                 placeholder="Message"
                 rows="8"
               ></textarea>
             </div>
-            <div class="row">
-              <div class="col text-end mt-2">
+            <div className="row">
+              <div className="col text-end mt-2">
                 <input type="submit" value="Send" />
               </div>
             </div>

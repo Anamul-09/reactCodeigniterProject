@@ -42,7 +42,7 @@ $routes->get('/productList', 'TestController::productList');
 $routes->get('/admin', 'Dashboard::index', ['filter' => 'authGuard']);
 $routes->presenter('products', ['filter' => 'authGuard']);
 $routes->presenter('category');
-$routes->resource('UserController');
+$routes->presenter('user_list');
 
 $routes->get('/users/signup', 'SignupController::index');
 $routes->Post('/users/store', 'SignupController::store');

@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\UsersModel;
 use CodeIgniter\RESTful\ResourceController;
 
-class UserController extends ResourceController
+class User_list extends ResourceController
 {
     /**
      * Return an array of resource objects, themselves in array format
@@ -17,6 +17,7 @@ class UserController extends ResourceController
         $model = new UsersModel();
         $data['users'] = $model->findAll();
         return view('users/user_list', $data);
+        // echo "hello";
     }
 
     /**
@@ -56,7 +57,10 @@ class UserController extends ResourceController
      */
     public function edit($id = null)
     {
-        //
+
+
+
+        // echo "hello";
     }
 
     /**
@@ -79,7 +83,7 @@ class UserController extends ResourceController
         $model = new UsersModel();
         $data =  $model->delete($id);
         // echo "yes";
-        return redirect()->to('usercontroller');
+        return redirect()->to('users');
         // echo "Successfully deleted";
     }
 }

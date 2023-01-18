@@ -53,7 +53,8 @@ class Category extends ResourceController
         $model = new CategoryModel();
         $data = $this->request->getPost();
         $model->save($data);
-        return view('category/category_list');
+
+        return redirect()->to('category');
         // echo "hello";
     }
 
@@ -65,8 +66,9 @@ class Category extends ResourceController
     public function edit($id = null)
     {
         $model = new CategoryModel();
-        $data['cats'] = $model->find($id);
+        $data['cat'] = $model->find($id);
         return view('category/edit_category', $data);
+        // echo "hello";
     }
 
     /**
@@ -90,9 +92,9 @@ class Category extends ResourceController
      */
     public function delete($id = null)
     {
-        // $model = new CategoryModel();
-        // $model->delete($id);
-        // return redirect()->to('category');
-        echo "hello";
+        $model = new CategoryModel();
+        $model->delete($id);
+        return redirect()->to('category');
+        // echo "hello";
     }
 }

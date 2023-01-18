@@ -22,21 +22,7 @@ function Cart(props) {
 
   return (
     <>
-      <div className="top_panel_title top_panel_style_1 title_present breadcrumbs_present scheme_original">
-        <div className="bg_cust_1 top_panel_title_inner top_panel_inner_style_1 title_present_inner breadcrumbs_present_inner">
-          <div className="content_wrap">
-            <h1 className="page_title">Cart</h1>
-            <div className="breadcrumbs">
-              <Link className="breadcrumbs_item home" to="/">
-                Home
-              </Link>
-              <span className="breadcrumbs_delimiter" />
-              <span className="breadcrumbs_item current">Cart Page</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="page_content_wrap page_paddings_no">
+      <div className="page_content_wrap page_paddings_no pt-5">
         <div className="content_wrap">
           <div className="content">
             <article className="post_item post_item_single post_featured_default post_format_standard page type-page hentry my-3">
@@ -44,7 +30,7 @@ function Cart(props) {
                 <div className="container">
                   <div className="section-wrapper">
                     <div className="cart-top">
-                      <table class="table table-bordered">
+                      <table className="table table-bordered">
                         <thead>
                           <tr>
                             <th>Product</th>

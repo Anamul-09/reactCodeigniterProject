@@ -54,5 +54,6 @@ class SigninController extends BaseController
         // print_r($_SESSION);   check for sesstion
         $session->destroy();
         return redirect()->to("/users/signin");
+        // echo "hello";
     }
 }

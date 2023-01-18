@@ -14,12 +14,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Dashboard</h1>
+                    <h1 class="m-0">All Category</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard v1</li>
+                        <li class="breadcrumb-item active">All Category</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -62,7 +62,12 @@
 
                                             <td>
                                                 <a href="/category/edit/<?php echo $cat['id'] ?>" class="btn btn-primary">Edit</a>
-                                                <a href="/category/delete/<?php echo $cat['id'] ?>" class="btn btn-danger">Delete</a>
+
+                                                <form method="post" action="<?= site_url("/category/delete/" . $cat['id']) ?>">
+                                                    <?= csrf_field() ?>
+                                                    <button class="btn btn-danger" onclick="return confirm('Are you Sure?')"><i class="fa fa-trash"></i></button>
+                                                </form>
+
                                             </td>
                                         </tr>
                                     <?php } ?>

@@ -7,22 +7,22 @@ export default function Header(props) {
   return (
     <div>
       <nav
-        class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block"
+        className="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block"
         id="templatemo_nav_top"
       >
-        <div class="container text-light">
-          <div class="w-100 d-flex justify-content-between">
+        <div className="container text-light">
+          <div className="w-100 d-flex justify-content-between">
             <div>
-              <i class="fa fa-envelope mx-2"></i>
+              <i className="fa fa-envelope mx-2"></i>
               <a
-                class="navbar-sm-brand text-light text-decoration-none"
+                className="navbar-sm-brand text-light text-decoration-none"
                 href="mailto:info@company.com"
               >
                 info@company.com
               </a>
-              <i class="fa fa-phone mx-2"></i>
+              <i className="fa fa-phone mx-2"></i>
               <a
-                class="navbar-sm-brand text-light text-decoration-none"
+                className="navbar-sm-brand text-light text-decoration-none"
                 href="tel:010-020-0340"
               >
                 010-020-0340
@@ -30,29 +30,33 @@ export default function Header(props) {
             </div>
             <div>
               <a
-                class="text-light"
+                className="text-light"
                 href="https://fb.com/templatemo"
                 target="_blank"
                 rel="sponsored"
               >
-                <i class="fab fa-facebook-f fa-sm fa-fw me-2"></i>
+                <i className="fab fa-facebook-f fa-sm fa-fw me-2"></i>
               </a>
               <a
-                class="text-light"
+                className="text-light"
                 href="https://www.instagram.com/"
                 target="_blank"
               >
-                <i class="fab fa-instagram fa-sm fa-fw me-2"></i>
-              </a>
-              <a class="text-light" href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter fa-sm fa-fw me-2"></i>
+                <i className="fab fa-instagram fa-sm fa-fw me-2"></i>
               </a>
               <a
-                class="text-light"
+                className="text-light"
+                href="https://twitter.com/"
+                target="_blank"
+              >
+                <i className="fab fa-twitter fa-sm fa-fw me-2"></i>
+              </a>
+              <a
+                className="text-light"
                 href="https://www.linkedin.com/"
                 target="_blank"
               >
-                <i class="fab fa-linkedin fa-sm fa-fw"></i>
+                <i className="fab fa-linkedin fa-sm fa-fw"></i>
               </a>
             </div>
           </div>
@@ -61,20 +65,20 @@ export default function Header(props) {
       {/* <!-- Close Top Nav -->
 
     <!-- Header --> */}
-      <nav class="navbar navbar-expand-lg navbar-light shadow">
-        <div class="container d-flex justify-content-between align-items-center">
+      <nav className="navbar navbar-expand-lg navbar-light shadow">
+        <div className="container d-flex justify-content-between align-items-center">
           <Link
             to=""
             className="navbar-brand text-success logo h1 align-self-center"
           >
             <img
               src="./assets/img/anam.jpg"
-              style={{ height: "70px", "border-radius": "100%" }}
+              style={{ height: "70px", borderRadius: "100%" }}
             />
           </Link>
 
           <button
-            class="navbar-toggler border-0"
+            className="navbar-toggler border-0"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#templatemo_main_nav"
@@ -82,52 +86,52 @@ export default function Header(props) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
           <div
-            class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between"
+            className="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between"
             id="templatemo_main_nav"
           >
-            <div class="flex-fill">
-              <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                <li class="nav-item">
+            <div className="flex-fill">
+              <ul className="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                <li className="nav-item">
                   <Link to="" className="nav-link">
                     Home
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link to="about" className="nav-link">
                     About
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link to="shope" className="nav-link">
                     Shope
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link to="contact" className="nav-link">
                     Contact
                   </Link>
                 </li>
               </ul>
             </div>
-            <div class="navbar align-self-center d-flex">
+            <div className="navbar align-self-center d-flex">
               <Link
                 to="/cart"
-                class="nav-icon position-relative text-decoration-none"
+                className="nav-icon position-relative text-decoration-none"
                 href="#"
               >
-                <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
+                <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
                   {cartItems.length}
                 </span>
                 &#2547; {itemsPrice.toFixed(2)}
               </Link>
 
               <a
-                class="nav-icon d-none d-lg-inline admin"
+                className="nav-icon d-none d-lg-inline admin"
                 href="http://localhost:8080/admin"
               >
                 Admin
