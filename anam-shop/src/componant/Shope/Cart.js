@@ -105,7 +105,7 @@ function Cart(props) {
                     </div>
                     <div className="cart-bottom">
                       <div className="row">
-                        <div className="col-6">
+                        {/* <div className="col-6">
                           <div className="shiping-box">
                             <div className="cart-overview">
                               <h4 className="m-0">Cart Totals</h4>
@@ -117,15 +117,15 @@ function Cart(props) {
                                   <p className="pull-right">Tk. </p>
                                 </li>
                                 <li>
-                                  {/* <span className="pull-left">Order Total</span>
-                                  <p className="pull-right">Tk. </p> */}
+                                  <span className="pull-left">Order Total</span>
+                                  // <p className="pull-right">Tk. </p>
                                   <li>
                                     <span className="pull-left">
                                       Order Total
                                     </span>
                                     <p className="pull-right">
                                       <span className="price">
-                                        {/* &#2547; {itemsPrice.toFixed(2)} */}
+                                        &#2547; {itemsPrice.toFixed(2)}
                                       </span>
                                     </p>
                                   </li>
@@ -133,17 +133,24 @@ function Cart(props) {
                               </ul>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                         <div className="col-6 d-flex justify-content-end align-items-end">
                           <div className="cart-checkout-box">
                             <form className="cart-checkout">
-                              <input
+                              {/* <input
                                 type="submit"
                                 value="Proceed to Checkout"
                                 style={{ width: "100%" }}
                                 onClick={() => navigate("/checkout")}
-                              />
+                              /> */}
                             </form>
+
+                            <Link
+                              to="/login"
+                              className="btn btn-primary btn-sm"
+                            >
+                              Proceed to Checkout
+                            </Link>
                           </div>
                         </div>
                       </div>

@@ -16,16 +16,16 @@ export default function Header(props) {
               <i className="fa fa-envelope mx-2"></i>
               <a
                 className="navbar-sm-brand text-light text-decoration-none"
-                href="mailto:info@company.com"
+                href="mailto:mdanamulislam09@gmail.com"
               >
-                info@company.com
+                mdanamulislam09@gmail.com
               </a>
               <i className="fa fa-phone mx-2"></i>
               <a
                 className="navbar-sm-brand text-light text-decoration-none"
-                href="tel:010-020-0340"
+                href=""
               >
-                010-020-0340
+                01847309892
               </a>
             </div>
             <div>
@@ -123,11 +123,11 @@ export default function Header(props) {
                 className="nav-icon position-relative text-decoration-none"
                 href="#"
               >
-                <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                <i className="fa fa-fw fa-cart-arrow-down text-dark mr-3"></i>
                 <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
                   {cartItems.length}
                 </span>
-                &#2547; {itemsPrice.toFixed(2)}
+                <span className="Imoney"> &#2547; {itemsPrice.toFixed(2)}</span>
               </Link>
 
               <a

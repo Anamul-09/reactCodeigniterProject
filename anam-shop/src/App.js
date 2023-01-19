@@ -12,6 +12,7 @@ import Saree from "./componant/Shope/Saree";
 import Bages from "./componant/Shope/Bages";
 import Handicraft from "./componant/Shope/Handicraft";
 import Cart from "./componant/Shope/Cart";
+import UserLogin from "./componant/form/Userlogin";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="bages" element={<Bages />} />
           <Route path="handicraft" element={<Handicraft />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<UserLogin />} />
         </Route>
       </Routes>
     </div>

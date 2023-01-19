@@ -83,7 +83,7 @@ class User_list extends ResourceController
         $model = new UsersModel();
         $data =  $model->delete($id);
         // echo "yes";
-        return redirect()->to('users');
+        return redirect()->to('user_list');
         // echo "Successfully deleted";
     }
 }

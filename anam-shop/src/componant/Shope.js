@@ -35,74 +35,42 @@ const ProductList = (addToCart, product) => {
         <div className="row">
           <div className="col-lg-3">
             <h1 className="h2 pb-4">Categories</h1>
+            <hr />
             <ul className="list-unstyled templatemo-accordion">
               <li className="pb-3">
                 <a
                   className="collapsed d-flex justify-content-between h3 text-decoration-none"
                   href="#"
                 >
-                  Gender
-                  <i className="fa fa-fw fa-chevron-circle-down mt-1"></i>
+                  All Products
                 </a>
-                <ul className="collapse show list-unstyled pl-3">
-                  <li>
-                    <a className="text-decoration-none" href="#">
-                      Men
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-decoration-none" href="#">
-                      Women
-                    </a>
-                  </li>
-                </ul>
               </li>
+              <hr />
               <li className="pb-3">
                 <a
                   className="collapsed d-flex justify-content-between h3 text-decoration-none"
                   href="#"
                 >
-                  Sale
-                  <i className="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
+                  Bages
                 </a>
-                <ul id="collapseTwo" className="collapse list-unstyled pl-3">
-                  <li>
-                    <a className="text-decoration-none" href="#">
-                      Sport
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-decoration-none" href="#">
-                      Luxury
-                    </a>
-                  </li>
-                </ul>
               </li>
+              <hr />
               <li className="pb-3">
                 <a
                   className="collapsed d-flex justify-content-between h3 text-decoration-none"
                   href="#"
                 >
-                  Product
-                  <i className="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
+                  Handkerchif
                 </a>
-                <ul id="collapseThree" className="collapse list-unstyled pl-3">
-                  <li>
-                    <a className="text-decoration-none" href="#">
-                      Bag
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-decoration-none" href="#">
-                      Sweather
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-decoration-none" href="#">
-                      Sunglass
-                    </a>
-                  </li>
-                </ul>
+              </li>
+              <hr />
+              <li className="pb-3">
+                <a
+                  className="collapsed d-flex justify-content-between h3 text-decoration-none"
+                  href="#"
+                >
+                  Sarees
+                </a>
               </li>
             </ul>
           </div>
@@ -131,7 +99,7 @@ const ProductList = (addToCart, product) => {
                     <div className="card rounded-0">
                       <img
                         className="card-img rounded-0 img-fluid"
-                        style={{ height: "350px" }}
+                        style={{ height: "250px" }}
                         src={`http://localhost:8080/${product.product_img}`}
                       />
                       <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
@@ -155,7 +123,9 @@ const ProductList = (addToCart, product) => {
                           <li>
                             <a
                               className="btn btn-success text-white mt-2"
-                              href="shop-single.html"
+                              role="button"
+                              onClick={() => onAdd(product)}
+                              href=""
                             >
                               <i className="fas fa-cart-plus"></i>
                             </a>
@@ -199,7 +169,7 @@ const ProductList = (addToCart, product) => {
                       <a
                         role="button"
                         onClick={() => onAdd(product)}
-                        className="button add_to_cart_button"
+                        className=" btn btn-warning button add_to_cart_button"
                       >
                         Add to Cart
                       </a>
