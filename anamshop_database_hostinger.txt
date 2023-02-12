@@ -1,0 +1,3 @@
+database_name:u318076185_anamshop
+Database_username:u318076185_anamshop
+Database_password:R3#zoqiqj/

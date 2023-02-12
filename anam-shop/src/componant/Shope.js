@@ -25,7 +25,10 @@ const ProductList = (addToCart, product) => {
   );
 
   const getProducts = async () => {
-    const products = await axios.get("http://localhost:8080/frontend/products");
+    const products = await axios.get(
+      "http://localhost:8080/frontend/products"
+      // "http://anamshop.bdprogrammers.com/frontend/products"
+    );
     setProducts(products.data);
   };
 

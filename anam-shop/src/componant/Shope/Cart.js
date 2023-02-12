@@ -47,6 +47,7 @@ function Cart(props) {
                                 <div className="p-thumb">
                                   <Link to={`/shop/view-product/${item.id}`}>
                                     <img
+                                      // src={`http://anamshop.bdprogrammers.com/${item.product_img}`}
                                       src={`http://localhost:8080/${item.product_img}`}
                                       className="img-thumbnail"
                                       style={{ height: "70px" }}

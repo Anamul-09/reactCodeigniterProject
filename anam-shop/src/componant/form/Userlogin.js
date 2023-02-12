@@ -18,6 +18,7 @@ export default function UserLogin() {
     console.log(user);
 
     axios
+      // .post("http://anamshop.bdprogrammers.com/frontend/users/login", user)
       .post("http://localhost:8080/frontend/users/login", user)
       .then((res) => {
         // alert(res.data.msg);

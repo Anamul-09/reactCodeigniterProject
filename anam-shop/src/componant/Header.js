@@ -133,6 +133,7 @@ export default function Header(props) {
               <a
                 className="nav-icon d-none d-lg-inline admin"
                 href="http://localhost:8080/admin"
+                // href="http://anamshop.bdprogrammers.com/admin"
               >
                 Admin
               </a>

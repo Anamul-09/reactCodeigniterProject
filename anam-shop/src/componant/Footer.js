@@ -8,26 +8,26 @@ export default function Footer() {
           <div className="row">
             <div className="col-md-4 pt-5">
               <h2 className="h2 text-success border-bottom pb-3 border-light logo">
-                Zay Shop
+                Anam Shop
               </h2>
               <ul className="list-unstyled text-light footer-link-list">
                 <li>
                   <i className="fas fa-map-marker-alt fa-fw"></i>
-                  123 Consectetur at ligula 10660
+                  Polton,Dhaka
                 </li>
                 <li>
                   <i className="fa fa-phone fa-fw"></i>
-                  <a className="text-decoration-none" href="tel:010-020-0340">
-                    010-020-0340
+                  <a className="text-decoration-none" href="tel:01847309892">
+                    01847309892
                   </a>
                 </li>
                 <li>
                   <i className="fa fa-envelope fa-fw"></i>
                   <a
                     className="text-decoration-none"
-                    href="mailto:info@company.com"
+                    href="mailto:mdanamulislam09@gmail.com"
                   >
-                    info@company.com
+                    mdanamulislam09@gmail.com
                   </a>
                 </li>
               </ul>
@@ -178,13 +178,13 @@ export default function Footer() {
             <div className="row pt-2">
               <div className="col-12">
                 <p className="text-left text-light">
-                  Copyright &copy; 2021 Company Name | Designed by
+                  Copyright &copy; 2021 Anam Shop | Designed by
                   <a
                     rel="sponsored"
                     href="https://templatemo.com"
                     target="_blank"
                   >
-                    TemplateMo
+                    Md Enamul Islam
                   </a>
                 </p>
               </div>

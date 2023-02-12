@@ -10,10 +10,17 @@ export default function Bages() {
 
   const getProducts = async () => {
     const products = await axios.get("http://localhost:8080/frontend/products");
+    // const products = await axios.get(
+    // "http://anamshop.bdprogrammers.com/frontend/products"
+    // );
     setProducts(products.data);
   };
 
   const deleteProduct = async (id) => {
+    await axios
+      .delete
+      // `http://anamshop.bdprogrammers.com/frontend/products/${id}`
+      ();
     await axios.delete(`http://localhost:8080/frontend/products/${id}`);
     getProducts();
   };
