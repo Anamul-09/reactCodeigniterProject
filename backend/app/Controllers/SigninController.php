@@ -53,7 +53,8 @@ class SigninController extends BaseController
         // echo "<pre>";
         // print_r($_SESSION);   check for sesstion
         $session->destroy();
-        return redirect()->to("/users/signin");
+        return redirect()->to("http://localhost:3000/");
+        // return redirect()->to("/users/signin");
         // echo "hello";
     }
 }
